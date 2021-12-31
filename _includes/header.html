@@ -1,19 +1,10 @@
-<!-- Header -->
-<header id="header" class="skel-layers-fixed">
-    <h1><a href="{{ site.baseurl }}/" class="site-title" >{{ site.title }}</a></h1>
-    <nav id="nav">
-        <ul>
-            <li><a href="{{ site.baseurl }}/">Home</a></li>
-            <li><a href="{{ site.baseurl }}/left-sidebar.html">Left Sidebar</a></li>
-            <li><a href="{{ site.baseurl }}/right-sidebar.html">Right Sidebar</a></li>
-            <li><a href="{{ site.baseurl }}/no-sidebar.html">No Sidebar</a></li>
-            <li><a href="{{ site.baseurl }}/blog.html">Blog</a></li>
-            {% for page in site.pages %}
-                  {% if page.title %}
-                    <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-                  {% endif %}
-            {% endfor %}
-            <li><a href="#" class="button special">Sign Up</a></li>
-        </ul>
-    </nav>
+<header>
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1>Your Favorite Source of Free Bootstrap Themes</h1>
+            <hr>
+            <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
+            <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+        </div>
+    </div>
 </header>
