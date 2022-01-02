@@ -49,5 +49,37 @@ Columns:
 - `Volume`: Volume on Yahoo Finance's charts are the physical number of shares traded of that stock (not dollar amount) for your given period of time.  
 - `Ticker`: identifier
 
+
+# Autoregressive model
+
+The autoregressive model specifies that the output variable depends linearly on its own previous values and on a stochastic term (an imperfectly predictable term)
+
+```python
+from statsmodels.tsa.ar_model import AutoReg
+from augur.eval.metrics import model_metrics
+import pandas as pd
+
+data = pd.read_pickle('resources/historical_dow_stock_data.pkl')
+data = data[['Date', 'Open', 'Ticker']]
+data = data[data.Ticker=='AAPL'].drop_duplicates(ignore_index=True)
+
+events_to_predict = 30
+train_data = data[:-events_to_predict].copy().reset_index(drop=True)
+test_data = data[-events_to_predict:].copy().reset_index(drop=True)
+
+# fit model
+model = AutoReg(train_data.Open, lags=10)
+model_fit = model.fit()
+y_hat = model_fit.predict(len(train_data), len(train_data) + events_to_predict - 1)
+model_metrics(test_data.Open, y_hat.tolist())
+```
+
+```
+{'mse': 313.46845218555507,
+ 'rmse': 17.705040304544777,
+ 'mae': 15.79379801617968,
+ 'mape': 0.09242717290908554}
+```
+
 # Reference
 [1]: https://en.wikipedia.org/wiki/Forecasting
