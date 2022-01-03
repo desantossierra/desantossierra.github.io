@@ -51,13 +51,9 @@ Columns:
 
 https://machinelearningmastery.com/time-series-forecasting-methods-in-python-cheat-sheet/
 
-# Autoregressive model
-
-The autoregressive model specifies that the output variable depends linearly on its own previous values and on a stochastic term (an imperfectly predictable term)
+# Datasets: train and test
 
 ```python
-from statsmodels.tsa.ar_model import AutoReg
-from augur.eval.metrics import model_metrics
 import pandas as pd
 
 data = pd.read_pickle('resources/historical_dow_stock_data.pkl')
@@ -67,6 +63,15 @@ data = data[data.Ticker=='AAPL'].drop_duplicates(ignore_index=True)
 events_to_predict = 30
 train_data = data[:-events_to_predict].copy().reset_index(drop=True)
 test_data = data[-events_to_predict:].copy().reset_index(drop=True)
+```
+
+# Autoregressive model
+
+The autoregressive model specifies that the output variable depends linearly on its own previous values and on a stochastic term (an imperfectly predictable term)
+
+```python
+from statsmodels.tsa.ar_model import AutoReg
+from augur.eval.metrics import model_metrics
 
 # fit model
 model = AutoReg(train_data.Open, lags=10)
@@ -75,7 +80,7 @@ y_hat = model_fit.predict(len(train_data), len(train_data) + events_to_predict -
 model_metrics(test_data.Open, y_hat.tolist())
 ```
 
-```
+```python
 {'mse': 313.46845218555507,
  'rmse': 17.705040304544777,
  'mae': 15.79379801617968,
@@ -105,7 +110,7 @@ for t in range(len(test)):
 model_metrics(test, predictions)
 ```
 Performance has improved remarkably.
-```
+```python
 {'mse': 15.984527917239209,
  'rmse': 3.998065521879201,
  'mae': 3.0717770018412067,
@@ -113,5 +118,29 @@ Performance has improved remarkably.
 ```
 **doubt**: can it be used for long term predictions?
 
+# Moving average 
+
+**[Moving-average model (MA model)][2]**  is a common approach for modeling univariate time series. The moving-average model 
+specifies that the output variable depends linearly on the current and various past values of a stochastic 
+(imperfectly predictable) term.
+
+```python
+# fit model
+model = ARIMA(train_data.Open, order=(0, 0, 1))
+# order = (p, d, q) order of the model for the autoregressive (p), differences (d), and moving average components (q).
+model_fit = model.fit()
+# make prediction
+y_hat = model_fit.predict(len(train_data), len(train_data) + events_to_predict - 1)
+model_metrics(test_data.Open, y_hat.tolist())
+```
+
+```python
+{'mse': 20203.231487138346,
+ 'rmse': 142.13807191297605,
+ 'mae': 141.24901695061772,
+ 'mape': 0.8462173357299907}
+```
+
 # Reference
 [1]: https://en.wikipedia.org/wiki/Forecasting
+[2]: https://en.wikipedia.org/wiki/Moving-average_model
