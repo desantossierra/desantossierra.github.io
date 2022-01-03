@@ -49,6 +49,7 @@ Columns:
 - `Volume`: Volume on Yahoo Finance's charts are the physical number of shares traded of that stock (not dollar amount) for your given period of time.  
 - `Ticker`: identifier
 
+https://machinelearningmastery.com/time-series-forecasting-methods-in-python-cheat-sheet/
 
 # Autoregressive model
 
@@ -80,6 +81,37 @@ model_metrics(test_data.Open, y_hat.tolist())
  'mae': 15.79379801617968,
  'mape': 0.09242717290908554}
 ```
+
+The model is not updated with the new data available (i.e. it uses the train data (up to t-1) for predicting 
+next value (t) but it doesn't add the true value at t to the train data for predicting t+1). 
+For such a purpose, we have to do it manually. 
+
+```python
+window = 29
+train = train_data.Open.tolist()
+test = test_data.Open.tolist()
+model = AutoReg(train, lags=window)
+model_fit = model.fit()
+coef = model_fit.params[::-1]
+# walk forward over time steps in test
+history = train[-window:]
+history = [history[i] for i in range(len(history))]
+predictions = list()
+for t in range(len(test)):
+    lag = history[-window:] + [1]
+    yhat = (coef * lag).sum()           #  predicted value
+    predictions.append(yhat)
+    history.append(test[t])             #  true value added to history 
+model_metrics(test, predictions)
+```
+Performance has improved remarkably.
+```
+{'mse': 15.984527917239209,
+ 'rmse': 3.998065521879201,
+ 'mae': 3.0717770018412067,
+ 'mape': 0.018307969637371135}
+```
+**doubt**: can it be used for long term predictions?
 
 # Reference
 [1]: https://en.wikipedia.org/wiki/Forecasting
