@@ -69,6 +69,8 @@ test_data = data[-events_to_predict:].copy().reset_index(drop=True)
 
 The autoregressive model specifies that the output variable depends linearly on its own previous values and on a stochastic term (an imperfectly predictable term)
 
+$$ X_t = c + \sum_{i=1}^{p} \varphi_i X_{t-i} + \varepsilon_t $$ 
+
 ```python
 from statsmodels.tsa.ar_model import AutoReg
 from augur.eval.metrics import model_metrics
@@ -124,6 +126,8 @@ Performance has improved remarkably.
 specifies that the output variable depends linearly on the current and various past values of a stochastic 
 (imperfectly predictable) term.
 
+$$ X_t = \mu + \varepsilon_t \sum_{i=1}^{q} \theta_i \varepsilon_{t-i}$$ 
+
 ```python
 # fit model
 model = ARIMA(train_data.Open, order=(0, 0, 1))
@@ -141,6 +145,19 @@ model_metrics(test_data.Open, y_hat.tolist())
  'mape': 0.8462173357299907}
 ```
 
+# ARMA: autoregressive moving average
+
+**[Autoregressive moving average model][3]**: It combines Autoregressive model (AR) and moving average model models (MA).
+
+The AR part involves on its own lagged values. The MA part involves modeling the error as a linear combination of error 
+terms.
+
+$$ X_t = c + \varepsilon_t + \sum_{i=1}^{p} \varphi_i X_{t-i} + \sum_{i=1}^{q} \theta_i \varepsilon_{t-i}$$ 
+
+
+
+
 # Reference
 [1]: https://en.wikipedia.org/wiki/Forecasting
 [2]: https://en.wikipedia.org/wiki/Moving-average_model
+[3]: https://en.wikipedia.org/wiki/Autoregressive%E2%80%93moving-average_model
