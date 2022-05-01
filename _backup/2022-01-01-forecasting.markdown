@@ -155,7 +155,43 @@ terms.
 $$ X_t = c + \varepsilon_t + \sum_{i=1}^{p} \varphi_i X_{t-i} + \sum_{i=1}^{q} \theta_i \varepsilon_{t-i}$$ 
 
 
+```python
+# fit model
+model = ARIMA(train_data.Open, order=(10, 0, 1))
+# order = (p, d, q) order of the model for the autoregressive (p), differences (d), and moving average components (q).
+model_fit = model.fit()
+# make prediction
+y_hat = model_fit.predict(len(train_data), len(train_data) + events_to_predict - 1)
+model_metrics(test_data.Open, y_hat.tolist())
+```
 
+```python
+{'mse': 415.99645254453776,
+ 'rmse': 20.395991090028886,
+ 'mae': 18.223052286736102,
+ 'mape': 0.10665761934668148}
+```
+
+## How to tune p and q
+
+We are going to run several times the ARMA model with a combination of p and q. I'm going to use RMSE as model metric to
+be minimised.
+
+I'm using a grid for `p` and `q` with values from 1 to 30 in steps of 5. After locating the minima, I will repeat the 
+grid approach but zooming in this area.
+
+I will use it later.
+
+### According to wikipedia
+
+Finding appropriate values of p and q in the ARMA(p,q) model can be facilitated by plotting the partial autocorrelation 
+functions for an estimate of p, and likewise using the autocorrelation functions for an estimate of q. 
+Extended autocorrelation functions (EACF) can be used to simultaneously determine p and q. 
+Further information can be gleaned by considering the same functions for the residuals of a model fitted with an initial 
+selection of p and q.
+
+Brockwell & Davis recommend using Akaike information criterion (AIC) for finding p and q. Another possible choice for 
+order determining is the BIC criterion. 
 
 # Reference
 [1]: https://en.wikipedia.org/wiki/Forecasting
