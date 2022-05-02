@@ -4,4 +4,4 @@ title:  Origami
 permalink: /origami/
 ---
 
-Origami is one of my passions. 
+![](logo_tco.png)
