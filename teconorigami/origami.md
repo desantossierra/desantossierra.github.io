@@ -1,6 +1,7 @@
 ---
 layout: page
-title:  "Origami"
+title:  Origami
+permalink: /origami/
 ---
 
 Origami is one of my passions. 
