@@ -7,7 +7,11 @@ img[src*='-w200'] {
     width: 200px
 }
 
+img[src*='-w200'] {
+    width: 400px
+}
+
 img[src*='-w30%'] {
-    width: 30%
-    position:relative
+  max-width: -webkit-calc(#{$content-width} / 3);
+  max-width:         calc(#{$content-width} / 3);
 }
