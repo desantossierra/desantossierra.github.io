@@ -1,4 +1,4 @@
-img[src$="centerme"] {
-  display:block;
-  margin: 0 auto;
+img[src*='#centerme'] {
+    display: block;
+    margin: auto;
 }
