@@ -6,9 +6,9 @@ permalink: /origami/
 
 ![Te con origami](logo_tco.png#centerme-w200)
 
-Té con origami nació en 2018. El origami siempre me ha acompañado desde pequeño y estuvo muy presente el día de mi boda.
+[Té con origami](http://www.teconorigami.es) nació en 2018. El origami siempre me ha acompañado desde pequeño y estuvo muy presente el día de mi boda.
 
-Hice esta página con un triple proposito. 
+Hice esta página con un triple proposito:
 1. mostrar mi trabajo como 'doblador de papel' y la belleza detrás de
 cada figura. 
 2. la fotografía, otra de mis pasiones.
