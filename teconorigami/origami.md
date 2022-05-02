@@ -4,4 +4,6 @@ title:  Origami
 permalink: /origami/
 ---
 
-![](logo_tco.png)
+<p align="center">
+  <img width="460" height="300" src="logo_tco.png">
+</p>
