@@ -19,4 +19,4 @@ cada figura.
    - Aprender como fotografíar para atraer al público.
 
 
-![](ramo.jpg#-w200) ![](bonsai.jpg#-w200) ![](bombilla.jpg#-w200) 
+![](ramo.jpg#-w30p) ![](centro.jpg#-w30p) ![](bombilla.jpg#-w30p) 

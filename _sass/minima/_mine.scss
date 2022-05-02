@@ -6,3 +6,7 @@ img[src*='#centerme'] {
 img[src*='-w200'] {
     width: 200px
 }
+
+img[src*='-w30%'] {
+    width: 30%
+}
