@@ -11,7 +11,7 @@ img[src*='-w200'] {
     width: 400px
 }
 
-img[src*='-w30%'] {
-  max-width: -webkit-calc(#{$content-width} / 3);
-  max-width:         calc(#{$content-width} / 3);
+img[src*='-w30p'] {
+  width: -webkit-calc(#{$content-width} / 3);
+  width:         calc(#{$content-width} / 3);
 }
