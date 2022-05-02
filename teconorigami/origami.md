@@ -19,6 +19,4 @@ cada figura.
    - Aprender como fotografíar para atraer al público.
 
 
-| Ramos | Bonsais | Otros |
-| :-----: | :-------: | :------: |
-|![](ramo.jpg#centerme) |![](bonsai.jpg#centerme) |![](bombilla.jpg#centerme) |
+![](ramo.jpg#-w200) ![](bonsai.jpg#-w200) ![](bombilla.jpg#-w200) 
