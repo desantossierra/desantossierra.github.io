@@ -4,4 +4,14 @@
 
 layout: home
 ---
-This is the index
+Hola! 
+
+Bienvenidos a mi github. 
+
+Actualmente estoy construyendo este espacio y aprendiendo como configurar las distintas plantillas, etc. 
+
+Hi!
+
+Welcome to my github,
+
+Currently I'm working on building this space and learning how to configure it properly. 

@@ -4,7 +4,7 @@ title:  Origami
 permalink: /origami/
 ---
 
-![Te con origami](logo_tco.png#centerme-w200)
+![Te con origami](logo_tco.png#centerme-w30p)
 
 [Té con origami](http://www.teconorigami.es) nació en 2018. El origami siempre me ha acompañado desde pequeño y estuvo muy presente el día de mi boda.
 
