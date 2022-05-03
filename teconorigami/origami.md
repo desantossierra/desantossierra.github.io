@@ -20,3 +20,4 @@ cada figura.
 
 
 ![](ramo.jpg#-w30p) ![](centro.jpg#-w30p) ![](bombilla.jpg#-w30p) 
+.
