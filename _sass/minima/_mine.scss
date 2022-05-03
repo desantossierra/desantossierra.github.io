@@ -12,8 +12,8 @@ img[src*='-w400'] {
 }
 
 img[src*='-w30p'] {
-  width: -webkit-calc((#{$content-width} / 3 ) - #{$spacing-unit});
-  width:         calc((#{$content-width} / 3 ) - #{$spacing-unit});
-  max-width: -webkit-calc((#{$content-width} / 3 ) - #{$spacing-unit});
-  max-width:         calc((#{$content-width} / 3 ) - #{$spacing-unit});
+  width: -webkit-calc((#{$content-width} - #{$spacing-unit}) / 3 );
+  width:         calc((#{$content-width} - #{$spacing-unit}) / 3 );
+  max-width: -webkit-calc((#{$content-width} - #{$spacing-unit}) / 3 );
+  max-width:         calc((#{$content-width} - #{$spacing-unit}) / 3 );
 }
