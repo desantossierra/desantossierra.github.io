@@ -15,7 +15,7 @@ zooplus - 1st retail company for pet products in Europe.
 
 ------------------------------------
 
-![zooplus](https://shop-public-cdn.mediazs.com/4315dafdf3116f65bed282d9226173f9/theme/zooplus/zooplus.es/image/icons/logo-social.png)
+<img src="https://shop-public-cdn.mediazs.com/4315dafdf3116f65bed282d9226173f9/theme/zooplus/zooplus.es/image/icons/logo-social.png" alt="zooplus" width="200"/>
 
 `12/2020 - Present` **Data Scientist Team Lead @ zooplus Services ESP** <br>
 `05/2019 - 12/2020` **Senior Data Scientist @ zooplus Services ESP**
@@ -34,6 +34,7 @@ knowledge over company: data science talks, data science hackathons, ...
 
 -------------------------------------
 
+<img src="https://www.bitrefill.com/content/cn/b_rgb%3AFFFFFF%2Cc_pad%2Ch_600%2Cw_1200/v1556099168/vodafone.jpg" alt="vodafone" width="200"/>
 
 `05/2018 - 05/2019` **Data Scientist @ Vodafone ES**
 
@@ -42,6 +43,7 @@ pySpark, Graphframes, Hive, MLLib. Machine Learning: python, sklearn, h2o, seabo
 
 --------------------------------------
 
+<img src="https://www.credilemon.com/img/logo/es/linea-directa.png" alt="lineadirecta" width="200"/>
 
 `10/2015 - 05/2018` **Data Scientist @ Linea Directa Aseguradora**
 
