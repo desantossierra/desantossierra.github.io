@@ -49,3 +49,12 @@ pySpark, Graphframes, Hive, MLLib. Machine Learning: python, sklearn, h2o, seabo
 
 Fraud detection based on complex network analysis with Big Data. (Big Data: Spark (java 8),
 GraphX, MLLib. Machine learning: R, mlr, h2o, caret, ...)
+
+--------------------------------------
+
+<img src="https://www.upm.es/sfs/Rectorado/Gabinete%20del%20Rector/Logos/UPM/Escudo%20con%20Leyenda/ESCUDO%20leyenda%20color%20JPG%20p.png" alt="upm" width="200"/>
+
+`12/2011 - 10/2015` **R+D Engineer@Group of biometrics,biosignals & security. UPM**
+
+Design and development of algorithms for individual identification through physical features.
+Biometrical algorithm adaptation for mobile devices.
