@@ -15,6 +15,7 @@ zooplus - 1st retail company for pet products in Europe.
 
 ------------------------------------
 
+
 `12/2020 - Present` **Data Scientist Team Lead @ zooplus Services ESP** <br>
 `05/2019 - 12/2020` **Senior Data Scientist @ zooplus Services ESP**
 
@@ -32,6 +33,7 @@ knowledge over company: data science talks, data science hackathons, ...
 
 -------------------------------------
 
+
 `05/2018 - 05/2019` **Data Scientist @ Vodafone ES**
 
 Churn prevention models, propensity to new products, process automation. (Big Data:
@@ -39,6 +41,8 @@ pySpark, Graphframes, Hive, MLLib. Machine Learning: python, sklearn, h2o, seabo
 
 --------------------------------------
 
+
 `10/2015 - 05/2018` **Data Scientist @ Linea Directa Aseguradora**
+
 Fraud detection based on complex network analysis with Big Data. (Big Data: Spark (java 8),
 GraphX, MLLib. Machine learning: R, mlr, h2o, caret, ...)
