@@ -15,7 +15,7 @@ zooplus - 1st retail company for pet products in Europe.
 
 ------------------------------------
 
-<img src="https://shop-public-cdn.mediazs.com/4315dafdf3116f65bed282d9226173f9/theme/zooplus/zooplus.es/image/icons/logo-social.png" alt="zooplus" width="200"/>
+<img src="https://uxt-components-prod.mediazs.com/shop-home/zooplus/images/logo-social.png" alt="zooplus" width="200"/>
 
 `12/2020 - Present` **Data Scientist Team Lead @ zooplus Services ESP** <br>
 `05/2019 - 12/2020` **Senior Data Scientist @ zooplus Services ESP**
